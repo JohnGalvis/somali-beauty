@@ -1,0 +1,15 @@
+@media (max-width: 768px) {
+  .navegacion { display: none; }            /* en móvil se usa el botón del carrito */
+  .portada { padding-block: 3rem; }
+  .detalle { grid-template-columns: 1fr; }  /* imagen arriba, texto abajo */
+  .marca__nombre { font-size: 1.5rem; }
+}
+
+@media (max-width: 480px) {
+  .cuadricula { grid-template-columns: repeat(2, 1fr); gap: 0.7rem; }
+  .tarjeta__cuerpo { padding: 0.7rem; }
+  .tarjeta__precio { font-size: 1.1rem; }
+  .tarjeta__titulo { font-size: 0.9rem; }
+  .boton { padding: 0.55rem 0.8rem; font-size: 0.88rem; }
+  .pie__interior { flex-direction: column; text-align: center; }
+}

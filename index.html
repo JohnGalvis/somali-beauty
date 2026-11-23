@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Somali Beauty | Insumos para pestañas y cejas</title>
+  <meta name="description" content="Catálogo de Somali Beauty: pestañas, adhesivos, pinzas, cejas y más. Arma tu carrito y aprovecha el precio por volumen.">
+  <meta name="theme-color" content="#9E1B24">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/componentes.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <header class="encabezado">
+    <div class="contenedor encabezado__interior">
+      <a href="#inicio" class="marca" aria-label="Somali Beauty, ir al inicio">
+        <img src="assets/img/logo.png" alt="Somali Beauty" class="marca__logo">
+      </a>
+
+      <nav class="navegacion" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#productos">Productos</a>
+      </nav>
+
+      <button class="boton boton--carrito" id="btn-abrir-carrito" aria-label="Abrir carrito">
+        <span aria-hidden="true">🛒</span> Carrito
+        <span class="insignia" id="contador-carrito">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- PORTADA -->
+    <section class="portada" id="inicio">
+      <div class="contenedor">
+        <p class="portada__etiqueta">✦ Somali Beauty ✦</p>
+        <h1>Todo para realzar cada mirada</h1>
+        <p class="portada__texto">
+          Pestañas, adhesivos, pinzas, cejas y más. Compra por unidad o aprovecha
+          el precio por volumen en cientos de productos.
+        </p>
+        <a href="#productos" class="boton boton--claro">Ver productos</a>
+      </div>
+    </section>
+
+    <!-- LISTADO DE PRODUCTOS -->
+    <section class="seccion contenedor" id="productos">
+      <h2 class="seccion__titulo">Nuestros productos</h2>
+
+      <div class="filtros">
+        <input type="search" id="buscador" class="filtros__campo filtros__campo--grande"
+               placeholder="Buscar producto…" aria-label="Buscar producto">
+        <select id="filtro-categoria" class="filtros__campo" aria-label="Filtrar por categoría">
+          <option value="">Todas las categorías</option>
+        </select>
+        <select id="orden" class="filtros__campo" aria-label="Ordenar productos">
+          <option value="relevancia">Ordenar: destacados</option>
+          <option value="precio-asc">Precio: menor a mayor</option>
+          <option value="precio-desc">Precio: mayor a menor</option>
+          <option value="nombre">Nombre (A-Z)</option>
+        </select>
+      </div>
+
+      <p id="mensaje-estado" class="mensaje-estado" role="status"></p>
+      <div id="listado-productos" class="cuadricula"></div>
+      <div id="contenedor-ver-mas" class="ver-mas"></div>
+    </section>
+  </main>
+
+  <!-- DETALLE DE PRODUCTO (ventana modal nativa) -->
+  <dialog id="modal-detalle" class="modal" aria-labelledby="detalle-titulo">
+    <button class="modal__cerrar" id="btn-cerrar-detalle" aria-label="Cerrar detalle">✕</button>
+    <div id="contenido-detalle"></div>
+  </dialog>
+
+  <!-- AVISO EMERGENTE -->
+  <div class="aviso" id="aviso" role="status" aria-live="polite"></div>
+
+  <!-- CARRITO (panel lateral) -->
+  <div class="fondo-oscuro" id="fondo-oscuro"></div>
+  <aside class="carrito" id="carrito" aria-label="Carrito de compras" aria-hidden="true">
+    <div class="carrito__encabezado">
+      <h2>Tu carrito</h2>
+      <button class="modal__cerrar" id="btn-cerrar-carrito" aria-label="Cerrar carrito">✕</button>
+    </div>
+
+    <div class="carrito__items" id="items-carrito"></div>
+
+    <div class="carrito__pie">
+      <p class="carrito__ahorro" id="ahorro-carrito" hidden></p>
+      <div class="carrito__total">
+        <span>Total a pagar:</span>
+        <strong id="total-carrito">$0</strong>
+      </div>
+      <button class="boton boton--secundario boton--ancho" id="btn-vaciar-carrito">
+        Vaciar carrito
+      </button>
+    </div>
+  </aside>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="pie" id="contacto">
+    <div class="contenedor pie__interior">
+      <div>
+        <img src="assets/img/logo-crema.png" alt="Somali Beauty" class="pie__logo">
+        <p>© 2026 Somali Beauty. Proyecto universitario.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

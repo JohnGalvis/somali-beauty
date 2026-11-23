@@ -1,0 +1,27 @@
+/* =====================================================
+   PALETA CORPORATIVA DE SOMALI BEAUTY
+   El rojo cereza es el color predominante del sitio.
+   Todo el diseño usa estas variables: para cambiar un
+   color solo lo editas aquí.
+   ===================================================== */
+:root {
+  /* Colores de la marca (los 5 de tu paleta) */
+  --rojo-cereza: #9E1B24;   /* PREDOMINANTE: encabezados, botones, precios, pie */
+  --rosa-principal: #F48CA7;/* acentos y detalles */
+  --rosa-pastel: #FDE2E6;   /* fondos suaves */
+  --crema: #F8F1EB;         /* fondo de la página */
+  --rosa-suave: #E7A7B3;    /* bordes y elementos secundarios */
+
+  /* Derivados (variaciones de los anteriores, para hover y textos) */
+  --cereza-oscuro: #7A1219; /* hover de botones y pie de página */
+  --texto: #3B1F22;         /* texto de lectura (vino muy oscuro) */
+  --texto-suave: #7D5A5E;
+  --blanco: #FFFFFF;
+
+  --fuente-base: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", sans-serif;
+  --fuente-marca: "Bodoni MT", Didot, "Playfair Display", Georgia, serif;
+  --radio: 14px;
+  --sombra: 0 2px 12px rgba(158, 27, 36, 0.10);
+  --sombra-fuerte: 0 8px 28px rgba(158, 27, 36, 0.22);
+  --ancho-maximo: 1240px;
+}

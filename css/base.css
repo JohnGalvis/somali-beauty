@@ -1,0 +1,72 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+body {
+  font-family: var(--fuente-base);
+  background: var(--crema);
+  color: var(--texto);
+  line-height: 1.5;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button, input, select { font-family: inherit; }
+
+:focus-visible { outline: 3px solid var(--rosa-principal); outline-offset: 2px; }
+
+.contenedor {
+  width: 100%;
+  max-width: var(--ancho-maximo);
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+.seccion { padding-block: 2.5rem; }
+.seccion__titulo {
+  margin-bottom: 1.25rem;
+  color: var(--rojo-cereza);
+  font-family: var(--fuente-marca);
+  font-size: 2rem;
+}
+
+/* ---------- Encabezado ---------- */
+.encabezado {
+  position: sticky; top: 0; z-index: 10;
+  background: var(--blanco);
+  border-bottom: 3px solid var(--rojo-cereza);
+  box-shadow: var(--sombra);
+}
+.encabezado__interior {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1rem; padding-block: 0.7rem;
+}
+
+/* Marca en texto (se usa mientras no pongas la imagen del logo) */
+.marca { display: flex; flex-direction: column; line-height: 1; color: var(--rojo-cereza); }
+.marca__nombre { font-family: var(--fuente-marca); font-weight: 800; font-size: 1.9rem; letter-spacing: 0.04em; }
+.marca__sub { align-self: flex-end; font-size: 0.8rem; letter-spacing: 0.18em; font-weight: 500; }
+.marca__logo { height: 46px; width: auto; }
+
+.navegacion { display: flex; gap: 1.75rem; }
+.navegacion a { font-weight: 600; color: var(--rojo-cereza); padding-block: 0.3rem; border-bottom: 2px solid transparent; }
+.navegacion a:hover { border-color: var(--rosa-principal); }
+
+/* ---------- Portada ---------- */
+.portada {
+  color: var(--crema);
+  text-align: center;
+  padding-block: 4.5rem;
+  background:
+    repeating-linear-gradient(90deg, rgba(255,255,255,0.07) 0 36px, transparent 36px 72px),
+    linear-gradient(135deg, var(--rojo-cereza), var(--cereza-oscuro));
+}
+.portada__etiqueta { letter-spacing: 0.25em; text-transform: uppercase; font-size: 0.85rem; color: var(--rosa-pastel); }
+.portada h1 { font-family: var(--fuente-marca); font-size: clamp(2rem, 5vw, 3.4rem); margin: 0.6rem 0; line-height: 1.15; }
+.portada__texto { max-width: 560px; margin: 0 auto 1.75rem; color: var(--rosa-pastel); }
+
+/* ---------- Pie de página ---------- */
+.pie { background: var(--cereza-oscuro); color: var(--crema); padding-block: 2rem; }
+.pie__interior { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.pie__logo { height: 52px; width: auto; margin-bottom: 0.5rem; }
+.pie a { color: var(--rosa-principal); font-weight: 600; text-decoration: underline; }
